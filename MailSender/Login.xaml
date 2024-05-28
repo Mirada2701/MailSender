@@ -1,0 +1,33 @@
+﻿<Window x:Class="MailSender.Login"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MailSender"
+        mc:Ignorable="d"
+        Title="Login" Height="300" Width="350"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        TextElement.FontWeight="Regular"
+        TextElement.FontSize="13"
+        TextOptions.TextFormattingMode="Ideal"
+        TextOptions.TextRenderingMode="Auto"
+        Background="{DynamicResource MaterialDesignPaper}"
+        FontFamily="{DynamicResource MaterialDesignFont}">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Label VerticalContentAlignment="Center" HorizontalContentAlignment="Center">Login : </Label>
+        <Label Grid.Row="1" VerticalContentAlignment="Center" HorizontalContentAlignment="Center">Password : </Label>
+        <TextBox x:Name="loginTb" Margin="10,30" Grid.Column="1"></TextBox>
+        <PasswordBox x:Name="passTb" Margin="10,30" Grid.Row="1" Grid.Column="1"></PasswordBox>
+        <Button Grid.Row="2" Grid.ColumnSpan="2" Margin="90,25" Click="Button_Click">Login</Button>
+    </Grid>
+</Window>
